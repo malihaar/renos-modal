@@ -5,13 +5,15 @@ var btnOpen = document.querySelector('.btn-modal-open');
 
 
 function closeModal() {
-  modal.style.display = 'none';
-  backdrop.style.display = 'none';
+  modal.classList.remove("open");
+  backdrop.classList.remove("open");
+  document.body.style.overflowY= 'visible';
 }
 
 btnOpen.addEventListener('click', function() {
-  modal.style.display = 'block';
-  backdrop.style.display = 'block';
+  modal.classList.add("open");
+  backdrop.classList.add("open");
+  document.body.style.overflowY= 'hidden';
 });
 
 btnClose.addEventListener('click', closeModal);
