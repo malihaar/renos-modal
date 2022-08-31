@@ -1,26 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>JavaScript Modal</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<body>
+  <body>
     <div class="backdrop"></div>
-    <div class="modal">
-        <button type="button" class="btn-cancel">X</button>
-        <h1>Hello Renos.id</h1>
-    </div>
-    <div class="demo-container">
-        <div class="modal-control">
-            <button type="button">Open Modal</button>
+    <div class="modal-container">
+      <div class="modal">
+        <div class="modal-header">
+          <h1>Modal Header</h1>
+          <button type="button" class="btn-modal-close">X</button>
         </div>
+        <div class="modal-body">
+          <h2>Renos.id</h2>
+          <p>Renos.id merupakan online marketplace yang fokus kepada Produk dan jasa kebutuhan rumah (home
+              living & home improvement), dengan memanfaatan teknologi yang menjadi passion kami serta kemitraan
+              dengan seller & penyedia jasa, pengguna bisa mendapatkan beragam pilihan serta penawaran dari
+              berbagai produk dan jasa yang berkualitas dengan harga yang kompetitif dan terjangkau.</p>
+        </div>
+        <div class="modal-footer">
+          <p>footer</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="demo-container">
+        <button type="button" class="btn-modal-open">Open Modal</button>
     </div>
     <script src="app.js"></script>
-</body>
-
+  </body>
 </html>

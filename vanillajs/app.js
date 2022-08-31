@@ -1,8 +1,7 @@
-var buttons = document.querySelectorAll('button');
 var modal = document.querySelector('.modal');
 var backdrop = document.querySelector('.backdrop');
-
-var textEdit = document.querySelector('.modal textarea');
+var btnClose = document.querySelector('.btn-modal-close');
+var btnOpen = document.querySelector('.btn-modal-open');
 
 
 function closeModal() {
@@ -10,10 +9,16 @@ function closeModal() {
   backdrop.style.display = 'none';
 }
 
-buttons[1].addEventListener('click', function() {
+btnOpen.addEventListener('click', function() {
   modal.style.display = 'block';
   backdrop.style.display = 'block';
 });
 
-buttons[0].addEventListener('click', closeModal);
+btnClose.addEventListener('click', closeModal);
 backdrop.addEventListener('click', closeModal);
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeModal();
+  }
+});
