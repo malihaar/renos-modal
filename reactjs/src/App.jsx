@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Modal from "./components/Modal.jsx";
 import "./App.css";
+import { useEffect } from "react";
 
 const modal = {
-  // title: `<h1>Renos.id</h1>`,
   title: (
     <>
       <h1>Renos.id</h1>
@@ -45,8 +45,18 @@ const modal = {
 function App() {
   const [showModal, setShowModal] = useState(false);
 
+  const handleEscapePress = (e) => {
+    if (e.key === "Escape") {
+      setShowModal(false);
+    }
+  }
+
+  useEffect(() => {
+    document.body.style.overflow = showModal ? "hidden" : "auto";
+  }, [showModal]);
+
   return (
-    <div className="App">
+    <div className="App" onKeyDown={handleEscapePress}>
       <div className="demo-container">
         <button
           type="button"
@@ -58,11 +68,7 @@ function App() {
       </div>
       {showModal ? (
         <Modal
-          title={
-            <>
-              <h1>test</h1>
-            </>
-          }
+          setShowModal={setShowModal}
           modal={modal}
           onClose={() => setShowModal(false)}
         />

@@ -1,0 +1,71 @@
+
+
+/* The Modal */
+.modal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.modal h1 {
+    color: #263E7A;
+}
+
+p,
+ul,
+li {
+    color: #414141;
+}
+
+.modal {
+    position: fixed;
+    z-index: 200;
+    width: 50%;
+    max-width: 780px;
+    min-width: 400px;
+    background: white;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+    padding: 3rem;
+    padding-bottom: 0.5rem;
+    border-radius: 2px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 20px;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
+    overflow: auto;
+    margin-bottom: 40px;
+}
+
+.modal-footer {
+    border-top: #263E7A 1px solid;
+    display: flex;
+    justify-content: center;
+}
+
+.modal-footer p {
+    color: #969696;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 400px) {
+
+    p,
+    ul,
+    li {
+        font-size: 0.7rem;
+    }
+}
