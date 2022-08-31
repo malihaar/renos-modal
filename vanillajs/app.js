@@ -1,7 +1,7 @@
-var modal = document.querySelector('.modal');
-var backdrop = document.querySelector('.backdrop');
-var btnClose = document.querySelector('.btn-modal-close');
-var btnOpen = document.querySelector('.btn-modal-open');
+let modal = document.querySelector('.modal');
+let backdrop = document.querySelector('.backdrop');
+let btnClose = document.querySelector('.btn-modal-close');
+let btnOpen = document.querySelector('.btn-modal-open');
 
 
 function closeModal() {
